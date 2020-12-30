@@ -1,0 +1,88 @@
+--------------------BLOG--------------------
+green-me			https://green-m.me/feed.xml
+360核心小组博客			http://blogs.360.cn/
+WE POP SHELLS			https://shells.systems/ 
+零组资料文库			http://www.0-sec.org/ 
+42team				https://42cloud.cn/ 
+四哥				http://scz.617.cn/ 
+crayon博客			https://crayon-xin.github.io/ 
+若水斋博客				https://blog.werner.wiki/  
+昔年博客				https://blog.ixinian.com/
+Raj博客				https://www.hackingarticles.in/
+倾旋的博客				https://payloads.online/
+绿盟科技blog			http://blog.nsfocus.net/
+袁哥blog				https://yuange1975.blogspot.com/?m=1
+rapid7				https://blog.rapid7.com/
+K0rz3n blog			https://www.k0rz3n.com/
+指南1				http://www.pentest-standard.org/index.php/Main_Page
+指南2				https://bitvijays.github.io/
+ssooking			https://www.cnblogs.com/ssooking/
+阿里云先知社区			https://xz.aliyun.com/
+				https://techanarchy.net/
+				https://pentest.blog/
+				https://blog.doyensec.com/
+				https://medium.com/@darkrain2009/
+				https://cloud.tencent.com/developer/user/1092855/
+				https://blog.netlab.360.com/
+				https://paper.seebug.org/
+				https://www.cnblogs.com/sanyuanempire/
+				https://windowssecurity.ca/
+				http://www.mannulinux.org/
+				https://adsecurity.org/
+				https://www.kitploit.com/
+				https://attack.mitre.org/
+TCP复习笔记			http://47.98.159.95/my_blog/tcp/001.html
+windows syscall			https://j00ru.vexillium.org/
+
+社工				https://github.com/zerobyte-id/SEcraper
+				https://github.com/threat9/routersploit
+
+--------------------USEFUL--------------------
+guides :
+metasploit			https://metasploit.help.rapid7.com/docs
+该网站可以查询对应证书的ip 		https://censys.io/
+历史dns记录 			https://securitytrails.com/
+速查				https://www.security-database.com/search.php
+知道要干什么忘了怎么干 		https://attack.mitre.org/
+一些查询   			https://www.adminsub.net/
+简单的渗透起手			https://book.hacktricks.xyz/                             
+查端口				https://www.speedguide.net/
+fofa				https://fofa.so/
+类fofa		1		https://www.shodan.io/
+		2		https://www.tenable.com/
+feed				https://feedburner.google.com/
+ipip				https://ipip.net
+ip				https://www.ipplus360.com
+ctf				http://ctf.ssleye.com/
+virustool			https://www.virustotal.com/
+社工库				https://lans-koy.com/database/
+esplainshell			https://www.explainshell.com/
+网络攻击流量			https://www.digitalattackmap.com/
+exp database	1		https://www.exploit-db.com/?type=&platform=&search=&author=&tag=&port=
+		2		https://cn.0day.today/
+		3		https://vulners.com/landing
+		4		https://www.rapid7.com/db/?type=nexpose
+		5		https://vuldb.com/?search.advanced
+		6		https://circl.lu/
+sys call			http://syscalls.kernelgrok.com/
+
+--------------------FEEDS--------------------
+360 核心安全技术博客 	 	http://blogs.360.cn/rss.html
+Shells.Systems  		https://shells.systems/feed/
+42cloud and 42team  		https://42cloud.cn/atom.xml
+若水斋 			 	https://blog.werner.wiki/feed/
+倾旋的博客  			https://payloads.online/feed.xml
+paper - Last paper  		https://paper.seebug.org/rss/
+360 Netlab Blog 		https://blog.netlab.360.com/rss/
+Kali Linux 		 	https://www.kali.org/feed/
+Hacking Articles  		https://www.hackingarticles.in/feed/
+360 Netlab Blog		 	http://feeds.feedburner.com/360/uxyw
+绿盟科技blog			http://blog.nsfocus.net/feed/
+rapid7				https://blog.rapid7.com/rss/
+K0rz3n bolg			https://www.k0rz3n.com/atom.xml
+kitploit			https://feeds.feedburner.com/PentestTools
+ssooking			http://feed.cnblogs.com/blog/u/300696/rss/
+昔年				https://community.ixinian.com/rss
+				https://pentest.blog/feed/
+				https://adsecurity.org/?feed=rss2
+				https://techanarchy.net/blog.rss

@@ -1,5 +1,7 @@
 " standard Profile of other commands
-"
+" 设置在 Vim 中可以使用鼠标 防止在 Linux 终端下无法拷贝
+set mouse=a
+set title " 修改终端标题
 syntax on
 syntax enable
 set hlsearch
@@ -9,16 +11,39 @@ set showmode
 set bg=dark
 set incsearch
 set helplang=cn
-set cursorcolumn
+"开启highlight 光标
 set cursorline
+set cursorcolumn
+"highlight format
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+" hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" highlight CursorLine   cterm=reverse gui=reverse ctermfg=white guibg=NONE guifg=NONE
+" highlight CursorColumn cterm=reverse gui=reverse ctermfg=red guibg=NONE guifg=NOE
+"	express:
+"	highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
+"	CursorLine 和 CursorColumn 分别表示当前所在的行列
+"	cterm 表示为原生vim设置样式，设置为NONE表示可以自定义设置。
+"	ctermbg 设置终端vim的背景色
+"	ctermfg 设置终端vim的前景色
+"	guibg 和 guifg 分别是设置gvim的背景和前景
+"
+"
+set ignorecase smartcase " 搜尋時忽略大小寫，但在有一個或以上大寫字母時仍保持對大小寫敏感
+set linebreak "設定單詞不跨行
+set incsearch
 set showmatch
+set cmdheight=1 " 設定命令列的行數為 1
+" set foldmethod=syntax " 設定語法摺疊
+set guifont=Courier\ New:h10
 " 总是显示状态栏
 set laststatus=2
 " 显示光标当前位置
 set ruler
 " set listchars=tab:>-,trail:-
 " 设置编码
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,acsii
 set termencoding=utf-8
 set encoding=utf-8
 filetype plugin on
@@ -37,9 +62,12 @@ filetype indent on
 
 
 
+
 " Plug profile
 call plug#begin('~/.vim/plugged')
 "
+"
+Plug 'beeender/Comrade'
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -48,6 +76,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 " ctags
 Plug 'ludovicchabant/vim-gutentags'
@@ -55,6 +84,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'jiangmiao/auto-pairs'
 " rainbow_parentheses 
 Plug 'kien/rainbow_parentheses.vim'
+"
+" Shougo/echodoc.vim   show the func param when you editing
+Plug 'Shougo/echodoc.vim'
 "
 " Here is the Plug called the NCM2 auto completions
 Plug 'ncm2/ncm2'
@@ -223,7 +255,7 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " let g:gutentags_ctags_extra_args += ['--python-kinds=+px']
-" ctags over
+
 
 
 
@@ -267,11 +299,18 @@ let g:AutoPairs = {
 			\'{':'}',
 			\"'":"'",
 			\'"':'"',
-			\"<":">",
 			\
 			\}
+" \"<":">",
 " AutoPairs profile end
 
+
+
+
+
+" show the func when you editing
+" let g:echodoc#enable_at_startup = 1
+" let g:echodoc#enable_force_overwrite = 1
 
 
 

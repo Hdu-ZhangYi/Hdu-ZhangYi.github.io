@@ -153,25 +153,38 @@ Plug 'Shougo/echodoc.vim'
 "Python plugins
 Plug 'davidhalter/jedi-vim'
 " disable the jedi complete and replaced with the deoplete jedi
-let g:jedi#completions_enabled = 0
+"let g:jedi#completions_enabled = 1
 "    Jedi在插入模式下实时显示函数调用签名，
 "    突出显示当前参数。呼叫签名可以显示为缓冲区中的弹出窗口（默认情况下设置为1（具有隐藏功能），
 "    否则设置为2），其优点是易于引用（但这种方法有很多缺点，因为它会更改缓冲区的内容），
 "    或者在Vim的命令行中与函数调用对齐（设置为2），
 "    这可以提高Vim撤消历史记录的完整性。
-let g:jedi#show_call_signatures = "1"
+"let g:jedi#show_call_signatures = "2"
 " Jedi selects the first line of the completion menu: for a better typing-flow and usually saves one keypress.
-let g:jedi#popup_select_first = 0
+"let g:jedi#popup_select_first = 0
 "
 " If you are a person who likes to use VIM-splits, you might want to put this in your .vimrc:
-" let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#use_splits_not_buffers = "left"
 " This options could be "left", "right", "top", "bottom" or "winwidth". It will decide the direction where the split open.
 "
 Plug 'deoplete-plugins/deoplete-jedi'
-" g:deoplete#sources#jedi#statement_length：设置完成描述文本的最大长度。如果超出此范围，则使用简单描述。默认：50
-" g:deoplete#sources#jedi#enable_typeinfo：启用完成的类型信息。如果禁用它，您将获得更快的结果。默认：1
-" g:deoplete#sources#jedi#enable_short_types：启用短期完成类型。默认：0
-" g:deoplete#sources#jedi#short_types_map：短类型映射字典。默认：{ 'import': 'imprt', 'function': 'def', 'globalstmt': 'var', 'instance': 'var', 'statement': 'var', 'keyword': 'keywd', 'module': 'mod', 'param': 'arg', 'property': 'prop', 'bytes': 'byte', 'complex': 'cmplx', 'object': 'obj', 'mappingproxy': 'dict', 'member_descriptor': 'cattr', 'getset_descriptor': 'cprop', 'method_descriptor': 'cdef', }
+" g:deoplete#sources#jedi#statement_length：
+" 设置完成描述文本的最大长度。如果超出此范围，则使用简单描述。默认：50
+" g:deoplete#sources#jedi#enable_typeinfo：
+" 启用完成的类型信息。如果禁用它，您将获得更快的结果。默认：1
+" g:deoplete#sources#jedi#enable_short_types：
+" 启用短期完成类型。默认：0
+" g:deoplete#sources#jedi#short_types_map：
+" 短类型映射字典。默认：{ 'import': 'imprt', 
+" 'function': 'def', 'globalstmt': 'var', 
+" 'instance': 'var', 'statement': 'var', 
+" 'keyword': 'keywd', 'module': 'mod', 
+" 'param': 'arg', 'property': 'prop', 
+" 'bytes': 'byte', 'complex': 'cmplx', 
+" 'object': 'obj', 'mappingproxy': 'dict', 
+" 'member_descriptor': 'cattr', 'getset_descriptor': 'cprop', 
+" 'method_descriptor': 'cdef',
+" }
 " g:deoplete#sources#jedi#show_docstring：在预览窗口中显示文档字符串。默认：0
 " g:deoplete#sources#jedi#python_path：设置用于完成服务器的Python解释器路径。它默认为“ python”，即第一个可用 python的$PATH。 注意：通常，这与Neovim的Python（:python）不同。
 " g:deoplete#sources#jedi#extra_path：sys.path执行完成时要添加的其他路径的列表 。
@@ -207,7 +220,7 @@ let g:rubycomplete_gemfile_path = 'Gemfile.aux'
 let g:rubycomplete_use_bundler = 1
 "<   To use custom paths that should be added to $LOAD_PATH to correctly
 "   resolve requires, set: >
-     let g:rubycomplete_load_paths = ["/path/to/code", "./lib/example"]
+"     let g:rubycomplete_load_paths = ["/path/to/code", "./lib/example"]
 
 
 

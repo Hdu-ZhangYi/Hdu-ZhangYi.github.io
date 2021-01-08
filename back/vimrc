@@ -2,8 +2,10 @@
 
 " 设置在 Vim 中可以使用鼠标 防止在 Linux 终端下无法拷贝
 set mouse=a
-
+" set ESC to clear the highlght search in current
+nnoremap <esc> :noh<return><esc>
 set title " 修改终端标题
+set relativenumber 
 syntax on
 syntax enable
 set hlsearch
@@ -36,7 +38,7 @@ set ignorecase smartcase " 搜尋時忽略大小寫，但在有一個或以上�
 set linebreak "設定單詞不跨行
 set incsearch
 set showmatch
-set cmdheight=1 " 設定命令列的行數為 1
+set cmdheight=2 " 設定命令列的行數為 1
 set laststatus=2 " 顯示狀態列 (預設值為 1, 無法顯示狀態列)
 
 " set foldmethod=syntax " 設定語法摺疊
@@ -82,10 +84,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
-" ctags
-Plug 'ludovicchabant/vim-gutentags'
 " auto pairs
 Plug 'jiangmiao/auto-pairs'
 " auto pairs
@@ -149,17 +148,55 @@ Plug 'Shougo/echodoc.vim'
 
 
 "vim for some languages
+"neovim LSP supports profile
+"
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+" Required for operations modifying multiple buffers like rename.
+"set hidden
+"
+"ruby language server protoocl needs the gem file named
+"solargraph 
+"i found
+"
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio'],  
+    \ }
+"
+" note that if you are using Plug mapping you should not use `noremap` mappings.
+let g:LanguageClient_autoStop = 0
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+"
+autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
+"
+"Run command 
+"
+"nvim +PlugInstall +UpdateRemotePlugins +qa 
+"
+"in shell to install this plugin. 
+"
+"Install corresponding language servers. 
+"Restart neovim/vim and language services will be available right away. 
+"Happy hacking!
+"
+"
 "
 "Python plugins
 Plug 'davidhalter/jedi-vim'
 " disable the jedi complete and replaced with the deoplete jedi
-"let g:jedi#completions_enabled = 1
+let g:jedi#completions_enabled = 1
 "    Jedi在插入模式下实时显示函数调用签名，
 "    突出显示当前参数。呼叫签名可以显示为缓冲区中的弹出窗口（默认情况下设置为1（具有隐藏功能），
 "    否则设置为2），其优点是易于引用（但这种方法有很多缺点，因为它会更改缓冲区的内容），
 "    或者在Vim的命令行中与函数调用对齐（设置为2），
-"    这可以提高Vim撤消历史记录的完整性。
-"let g:jedi#show_call_signatures = "2"
+"    这可以提高Vim撤消历史记录的完整性
+"    there 0 1 2 is "0" "1" "2"
+let g:jedi#show_call_signatures = "2"
 " Jedi selects the first line of the completion menu: for a better typing-flow and usually saves one keypress.
 "let g:jedi#popup_select_first = 0
 "
@@ -240,6 +277,7 @@ set completeopt=noinsert,menuone,noselect
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim'
 " NCM2 over!
 " This is the markdownPreview .config
 " If you don't have nodejs and yarn
@@ -362,9 +400,6 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 " markdownPreview over
  
-
-
-
 
 
 call plug#end()

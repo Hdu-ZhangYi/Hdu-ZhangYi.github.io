@@ -7,7 +7,7 @@ tags: ctf
 
 # information_collect
 
-first we need locate the machine.
+frist we need locate the machine.
 
 we got command as
 ```

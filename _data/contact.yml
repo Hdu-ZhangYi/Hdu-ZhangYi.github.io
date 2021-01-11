@@ -21,7 +21,7 @@
 -
   type: telegram
   icon: 'fab fa-telegram'
-  noblank: true
+  url: https://t.me/EsonHugh_Skywalker
 
 # Uncomment and complete the url below to enable more contact options
 # -

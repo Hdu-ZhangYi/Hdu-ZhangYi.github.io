@@ -1,5 +1,8 @@
 " standard Profile of other commands
-
+"
+highlight Search ctermbg=yellow ctermfg=black 
+highlight IncSearch ctermbg=black ctermfg=yellow 
+highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
 " 设置在 Vim 中可以使用鼠标 防止在 Linux 终端下无法拷贝
 set mouse=a
 " set ESC to clear the highlght search in current

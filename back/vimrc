@@ -19,13 +19,19 @@ set bg=dark
 set incsearch
 set helplang=cn
 "开启highlight 光标
-set cursorline
-set cursorcolumn
-"highlight format
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-" hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+autocmd InsertEnter * set ruler
+autocmd InsertEnter * set nocursorcolumn
+autocmd InsertLeave * set cursorcolumn
+autocmd InsertLeave * set cursorline
+autocmd InsertEnter * set nocursorline
+" highlight format 3 plans
+" PLAN 1
+" highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+" highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+" PLAN 2
+highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" PLAN 3
 " highlight CursorLine   cterm=reverse gui=reverse ctermfg=white guibg=NONE guifg=NONE
 " highlight CursorColumn cterm=reverse gui=reverse ctermfg=red guibg=NONE guifg=NOE
 "	express:

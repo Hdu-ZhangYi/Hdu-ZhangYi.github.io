@@ -51,6 +51,16 @@ Faster Nmap scanning with Rust
 
 剩下主要是一些失败的尝试
 
+### 探寻了CVE 通用漏洞利用
+
+但是searchsploit 在ngnix和版本的配合下 尽管有找到一些利用和漏洞 但是实际跑起来都是 不可行的方案
+
+搜索了exploit-db也无任何发现
+
+于是成功排除cve可能
+
+ssh连接也看了一眼 版本是不可利用版本
+
 ### sql注入可能性排除
 
 首先并不清楚是不是有sql存在
@@ -101,7 +111,7 @@ we can burp for it
 
 # 攻击 寻找攻击方向
 
-## 突破点
+## 突破点 entry point
 
 在浏览目录的时候
 

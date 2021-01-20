@@ -9,8 +9,7 @@ comments: true
 
 <script id="PlayerHelper" src="/tabs/musicPlayer.js"></script>
 <iframe id="musicPlayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//www.baidu.com/"></iframe>
-
-
+<script>Player();</script>
 
 
 
@@ -139,7 +138,6 @@ space for update
 -->
 
 <script>
-Player();
 console.log("alert:No for the social engineering use! i don't love being tracked.\n\n");
 console.log("------welcome_friend-------\n---hope to see you again---\n-hope exchange friend link-\n");
 </script>

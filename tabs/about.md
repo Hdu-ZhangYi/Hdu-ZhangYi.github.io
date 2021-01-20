@@ -9,7 +9,11 @@ comments: true
 
 <script id="PlayerHelper" src="/tabs/musicPlayer.js"></script>
 <iframe id="musicPlayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//www.baidu.com/"></iframe>
-<script>Player()</script>
+<script>Player();
+console.log("alert:No for the social engineering use! i don't love being tracked.");
+
+</script>
+
 
 
 
@@ -30,13 +34,15 @@ OS_Constellations:Scorpius
 
 OS_environment(*Loaction*):Shanghai/Hangzhou
 
-OS_shell(*Job*):**student**
+OS_shell(*Job*):__student__
 
 OS_version(*Ages*):XX[data_error]
 
-OS_package(*Personality*):**INTP-T**
+OS_package(*Personality*):__INTP-T__
 
-OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bash~~ :~~vim-script~~  ## all of them is learning now
+OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bash~~ :~~vim-script~~ :~~PHP~~ :~~Ruby off rail~~  
+
+> all of them are learning now
 
 
 
@@ -54,7 +60,7 @@ create a shit codes
 
 play box as HTB/(but now is more vulnhub)
 
-PATH(subjects):
+ENV/PATH(subjects):
 
 Math:
 Physics:
@@ -118,14 +124,25 @@ Mail_address:<esonhughoutside@gmail.com>
 
 > 事一个有一点点小简单的友链板
 
-User_name|website
----------|-------
-weepingdogel|[https://weepingdogel.github.io/](https://weepingdogel.github.io/)
-ajin|[https://ajin.cloud/](https://ajin.cloud/)
-欠陥電気|[https://blog.atri.tk/](https://blog.atri.tk/)
-andychen|[https://andychen.tk/](https://andychen.tk/)
-atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)
-LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)
+name|website|descriptions(assert)
+----|-------|-----
+weepingdogel|[https://weepingdogel.github.io/](https://weepingdogel.github.io/)|Once lost thing will never be able to come back.
+ajin|[https://ajin.cloud/](https://ajin.cloud/)|是世界上最好的人啊
+欠陥電気|[https://blog.atri.tk/](https://blog.atri.tk/)|划水摸鱼最快乐啦～
+andychen|[https://hydropwr.ca/](https://hydropwr.ca/)|10th grade pseudo-geek/OIer/Railway Fan/ACG Rookie/μ’sic forever!
+atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)|Procrastination is the thief of time.
+LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|LeiBlog
+isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|不定期跟新个人碎碎念&学习笔记,欢迎浏览！
+<!-- 
+space for update
+// 友链交换愿望
+// 欢迎你的到来
+//
+-->
+
+<script>
+console.log("------欢迎你的到来 友链交换希望------");
+</script>
 
 ---
 

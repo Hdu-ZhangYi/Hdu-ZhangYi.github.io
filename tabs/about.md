@@ -125,14 +125,16 @@ Mail_address:<esonhughoutside@gmail.com>
 > 事一个有一点点小简单的友链板
 
 name|website|descriptions(assert)
-----|-------|-----
-weepingdogel|[https://weepingdogel.github.io/](https://weepingdogel.github.io/)|Once lost thing will never be able to come back.
-ajin|[https://ajin.cloud/](https://ajin.cloud/)|是世界上最好的人啊
-欠陥電気|[https://blog.atri.tk/](https://blog.atri.tk/)|划水摸鱼最快乐啦～
-andychen|[https://hydropwr.ca/](https://hydropwr.ca/)|10th grade pseudo-geek/OIer/Railway Fan/ACG Rookie/μ’sic forever!
-atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)|Procrastination is the thief of time.
-LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|LeiBlog
-isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|不定期跟新个人碎碎念&学习笔记,欢迎浏览！
+----|---|---
+weepingdogel|[https://weepingdogel.github.io/](https://weepingdogel.github.io/)|"Once lost thing will never be able to come back."
+ajin|[https://blog.ajin.cloud/](https://ajin.cloud/)|"是世界上最好的人啊"
+欠陥電気|[https://blog.atri.tk/](https://blog.atri.tk/)|"划水摸鱼最快乐啦～"
+andychen|[https://hydropwr.ca/](https://hydropwr.ca/)|"10th grade pseudo-geek/OIer/Railway Fan/ACG Rookie/μ’sic forever!"
+atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)|"Procrastination is the thief of time."
+LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|"LeiBlog""
+isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|"不定期跟新个人碎碎念&学习笔记,欢迎浏览!"
+
+
 <!-- 
 space for update
 // 友链交换愿望

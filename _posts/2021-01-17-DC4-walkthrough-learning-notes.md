@@ -655,6 +655,14 @@ jim@dc-4:~$
 > 而使用echo　>>续写的时候 会丢失文件权限
 >
 > copy等指令也会导致类似的结果.
+>
+> 于此同时suid 仅限于二进制可执行文件 对于脚本或者类script设置suid和sgid均无效
+>
+> 除非脚本的解释器本身具有suid权限,例如
+>
+> bash ： bash -p
+> 
+> perl ： perl -e 'exec "/bin/sh";'
 
 但是简单的将文件保存为 /bin/bash的shell脚本并不能导致权限提升
 

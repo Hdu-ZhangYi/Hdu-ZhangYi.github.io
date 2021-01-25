@@ -2,7 +2,7 @@
 title: DC1 walk-through/learning notes
 date: 2020-09-20 +0800
 categories: [pentest-learning,Vulnhub]
-tags: ctf,suid
+tags: [ctf,suid]
 ---
 
 # information_collect

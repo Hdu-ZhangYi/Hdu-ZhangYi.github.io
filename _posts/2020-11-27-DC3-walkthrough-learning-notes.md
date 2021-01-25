@@ -2,7 +2,7 @@
 title: DC3 walk-through/learning notes
 date: 2020-11-27 +0800
 categories: [pentest-learning,Vulnhub]
-tags: ctf,sql
+tags: [ctf,sql]
 ---
 
 # 小心探测

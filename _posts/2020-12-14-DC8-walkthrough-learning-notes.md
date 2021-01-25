@@ -2,7 +2,7 @@
 title: DC8 walk-through/learning notes
 date: 2020-12-14 +0800
 categories: [pentest-learning,Vulnhub]
-tags: ctf,sql,suid
+tags: [ctf,sql,suid]
 ---
 
 # 信息收集阶段

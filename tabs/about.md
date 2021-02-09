@@ -30,8 +30,6 @@ OS_Gender:male
 
 OS_Constellations:Scorpius 
 
-OS_environment(*Loaction*):Shanghai/Hangzhou
-
 OS_shell(*Job*):__student__
 
 OS_version(*Ages*):XX[data_error]
@@ -43,7 +41,6 @@ OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bas
 > all of them are learning now
 
 
-
 ---
 
 ## OS_feature(hobbies&favourite)
@@ -51,6 +48,7 @@ OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bas
 ---
 
 **VIM  is the best!**
+
 *Neovim is always used // get started with Neovim in 2020-12-09*
 
 
@@ -131,7 +129,7 @@ CRH6F-A-0464|[https://hydropwr.ca/](https://hydropwr.ca/)|"10th grade pseudo-gee
 atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)|"Procrastination is the thief of time."
 LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|"LeiBlog"
 isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|"不定期跟新个人碎碎念&学习笔记,欢迎浏览!"
-MiaoTony|[https://miaotony.xyz/](https://miaotony.xyz/)|"MiaoOOW"
+MiaoTony|[https://miaotony.xyz/](https://miaotony.xyz/)|"MeoW"
 
 
 <!-- 

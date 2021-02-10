@@ -1,10 +1,13 @@
 " standard Profile of other commands
 "
+packadd termdebug
 highlight Search ctermbg=yellow ctermfg=black 
 highlight IncSearch ctermbg=black ctermfg=yellow 
 highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
 " 设置在 Vim 中可以使用鼠标 防止在 Linux 终端下无法拷贝
 set mouse=a
+" not use the vi compatible mode
+set nocompatible
 " set ESC to clear the highlght search in current
 nnoremap <esc> :noh<return><esc>
 set title " 修改终端标题
@@ -20,11 +23,16 @@ set incsearch
 set helplang=cn
 "开启highlight 光标
 autocmd InsertEnter * set ruler
+" auto highlight line and column
 autocmd InsertEnter * set nocursorcolumn
 autocmd InsertLeave * set cursorcolumn
 autocmd InsertLeave * set cursorline
 autocmd InsertEnter * set nocursorline
-" highlight format 3 plans
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" auto match 
+autocmd InsertEnter * set noshowmatch
+autocmd InsertLeave * set showmatch
+" highlight format 3 plans 
 " PLAN 1
 " highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 " highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
@@ -49,16 +57,11 @@ set incsearch
 set showmatch
 set cmdheight=2 " 設定命令列的行數為 1
 set laststatus=2 " 顯示狀態列 (預設值為 1, 無法顯示狀態列)
-
 " set foldmethod=syntax " 設定語法摺疊
-
 set guifont=Courier\ New:h10
-
 " 显示光标当前位置
 set ruler 
-
 " set listchars=tab:>-,trail:-
-
 " 设置编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,acsii
 set termencoding=utf-8
@@ -116,7 +119,8 @@ let g:AutoPairs = {
 " rainbow_parentheses 
 Plug 'kien/rainbow_parentheses.vim'
 " rainbow_parentheses profile
-autocmd VimEnter * RainbowParenthesesToggle
+autocmd VimEnter,WinNew * RainbowParenthesesToggle
+autocmd InsertEnter * RainbowParenthesesToggle
 " autoload
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -425,5 +429,8 @@ cnoreabbrev Rainbow RainbowParenthesesToggle
 cnoreabbrev Markdown MarkdownPreview
 " Install -> PlugUpdate
 cnoreabbrev Install PlugUpdate
+" Gdb -> termdebug
+cnoreabbrev Gdb Termdebug
 " alias over
+
 " EOF 

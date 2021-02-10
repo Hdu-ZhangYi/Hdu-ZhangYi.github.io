@@ -1,0 +1,7 @@
+/.+\.baidu\.com/
+/.+\.csdn\.net/
+/.+\.jianshu\.com/
+/.+\.zhihu\.com/
+/yq\.aliyun\.com/
+/cloud\.tencent\.com\/developer/
+/baijiahao.baidu.com/

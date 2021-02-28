@@ -49,8 +49,7 @@ OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bas
 
 **VIM  is the best!**
 
-*Neovim is always used // get started with Neovim in 2020-12-09*
-
+**Neovim is always used // get started with Neovim in 2020-12-09**
 
 create a shit codes
 
@@ -68,7 +67,7 @@ singer_REOL
 
 food_beef
 
-almost very kind of meat
+almost each kind of meat
 
 ---
 

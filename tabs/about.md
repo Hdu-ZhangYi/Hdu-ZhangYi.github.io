@@ -8,7 +8,7 @@ comments: true
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=5358234121&auto=1&height=90"></iframe>-->
 
 <script id="PlayerHelper" src="/tabs/musicPlayer.js"></script>
-<iframe id="musicPlayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//www.baidu.com/"></iframe>
+<iframe id="musicPlayer" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1466303986&auto=1&height=66"></iframe>
 <script>Player();</script>
 <script>
 console.log("alert:No for the social engineering use! i don't love being tracked.\n\n");

@@ -329,11 +329,9 @@ Plug 'ncm2/ncm2-neoinclude' | Plug 'Shougo/neoinclude.vim'
 
 
 
-
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " If you have nodejs and yarn
 " markdownPreview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 " here is the config of the markdownPreview
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
@@ -365,7 +363,7 @@ let g:mkdp_open_ip = ''
 let g:mkdp_browser = ''
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
-let g:mkdp_echo_preview_url = 0
+let g:mkdp_echo_preview_url = 1
 " a custom vim function name to open preview page
 " this function will receive url as param
 " default is empty
@@ -404,15 +402,14 @@ let g:mkdp_markdown_css = ''
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
 let g:mkdp_highlight_css = ''
 " use a custom port to start server or random for empty
-let g:mkdp_port = ''
+let g:mkdp_port = '12345'
 " preview page title
 " ${name} will be replace with the file name
 let g:mkdp_page_title = '「${name}」'
 " recognized filetypes
 " these filetypes will have MarkdownPreview... commands
-let g:mkdp_filetypes = ['markdown']
+" let g:mkdp_filetypes = ['markdown',"md"]
 " markdownPreview over
- 
 
 
 call plug#end()

@@ -1,3 +1,4 @@
+#! /bin/zsh
 # ~/.zshrc file for zsh non-login shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
@@ -197,55 +198,79 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 export ZSH="/home/kali/.oh-my-zsh"
-export ZSH_THEME="ys"
+export ZSH_THEME="agnoster"
 
-fpath=(path/to/zsh-completions/src $fpath)
-
+fpath=(/usr/share/zsh-completions/src $fpath)
 
 
 alias py="echo python3 is default python version in py command which created by alias;echo;python3"
 alias python="echo python3 is default python version in python command which created by alias;echo;python3"
-alias msf="msfconsole"
-alias pip="echo pip has its python3 version,and i alias it as pip.if you need pip command you can use \\pip;pip3"
+alias py3="python3 "
+alias py2="python2 "
 
-
-alias mv="mv -i"
-alias apt="sudo apt"
+alias mv="mv -i "
+alias nmap='sudo nmap '
+alias rustscan="sudo rustscan --ulimit 5000 "
+alias apt="sudo apt "
 alias netdiscover="sudo netdiscover"
 alias unexport="unset"
 alias unport="unset"
 alias rm="rm -i -r"
 alias md="mkdir"
-alias nmap='sudo nmap'
-
-
-export clash="192.168.31.25"
-
+alias c="clear"
+alias arpspoof="sudo arpspoof"
+alias wireshark="sudo wireshark"
 alias arp-scan="sudo arp-scan"
-
 alias vim="nvim"
 alias vi="nvim"
 
+alias phpstorm='/home/kali/PHPstorm/bin/phpstorm.sh'
+alias rubymine="/home/kali/RubyMine/bin/rubymine.sh"
+alias webstorm="/home/kali/WebStorm/bin/webstorm.sh"
+alias msf="msfconsole"
+alias msfp="msfvenom -l payload"
+
+function git-tool() {
+	git add .
+	git commit -m "$1"
+	git push
+}
+
+function diskspace() {
+	df -h
+}
 
 
+export clash="192.168.31.25"
+export portOfClash=7890
 
-backup_zshrc(){
+function backup_zshrc(){
         cp .zshrc zshrc_backup && echo "update profile complete"
 }
-recover_zshrc(){
+
+function recover_zshrc(){
         cp ~/zshrc_backup ~/.zshrc && echo "recover profile complete"
 }
 
-clash(){
+function clash(){
         case "$1" in
-
-                state)
-                        export|grep proxy
-                        echo 'if not got any output as "https_proxy",the proxy is close'
-                        ;;
-
+		h)
+			echo "                                    "
+			echo "==============usage================="
+			echo "clash [command] [params]"
+			echo "=============command================"
+			echo "proxy proxy_ip	import ip temply"
+			echo "on		open the cli proxy"
+			echo "off		close the proxy"
+			echo "*			show proxy & help"
+			echo "h			show help"
+			echo "===================================="
+			;;
+		proxy)
+			export clash="$2"
+			;;
                 on)
-			export https_proxy=http://$clash:7890 http_proxy=http://$clash:7890 all_proxy=socks5://$clash:7890 && echo 'export clash complete'
+			export https_proxy=http://$clash:$portOfClash http_proxy=http://$clash:$portOfClash all_proxy=socks5://$clash:$portOfClash && echo 'export clash complete'
                         ;;
 
                 off)
@@ -258,35 +283,57 @@ clash(){
 
         esac
 }
-clash_state(){
-result=$(export|grep proxy)
-#       if [[ $result == 'all_proxy=socks5://127.0.0.1:7890
-#http_proxy=http://127.0.0.1:7890
-#https_proxy=http://127.0.0.1:7890' ]]; then
-if [[ -n $result ]]; then
-echo "proxy is on"
-else
-echo "proxy is off"
-fi
-}
-
-clash_off(){
-        unset https_proxy http_proxy all_proxy && echo "clash is down"
-}
-
-
-plugins=(git zsh-autosuggestions zsh-completions)
-autoload -U compinit && compinit
-source $ZSH/oh-my-zsh.sh
-
 
 export PAGERS="most"
-
 export burp_proxy="127.0.0.1:8080"
-
 export PATH="$PATH:/home/kali/.local/bin"
+
+export PATH="$PATH:/home/kali/Desktop/burp"
+export PATH="$PATH:/home/kali/PHPstorm/bin"
+export PATH="$PATH:/home/kali/RubymineProjects/bin"
+export PATH="$PATH:/home/kali/WebStorm/bin"
+
+export PATH="$PATH:/home/kali/.rvm/"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[ -f ~/.rvm ] && source "$HOME/.rvm/scripts/rvm"
+
+
+# enable command-not-found if installed
+if [ -f /etc/zsh_command_not_found ]; then
+    . /etc/zsh_command_not_found
+fi
+
+COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+
+
+# powerline shell 
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+function powerlineON() {
+	if [ "$TERM" != "linux" ]; then
+    		install_powerline_precmd
+	fi
+}
+
+function vimode() {
+	export EDITOR="vim"
+	bindkey -v #set up my zsh vim mode
+}
+
+vimode

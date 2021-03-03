@@ -39,7 +39,7 @@ OS_package(*Personality*):__INTP-T__
 OS_language(*Programming language*): Python: C/C++: ~~SQL~~ :~~Markdown~~ :~~bash~~ :~~vim-script~~ :~~PHP~~ :~~Ruby off rail~~  
 
 > all of them are learning now
-
+>
 
 ---
 
@@ -73,13 +73,15 @@ almost each kind of meat
 
 ## OS_issues(future plans)
 
-1.familiar linux more especially the CLI
+1.~~ familiar linux more especially the CLI ~~
 
 2.learning for Kali(using tools and having ability to do some coooool things)
 
 3.learn more and try harder (ths last words come from the OSCP course)
 
-4.......(to be continue.. ->)
+4.learning MVC web framework and get ROR (Ruby off rails) to ROR (Ruby on rails)
+
+5.......(to be continue.. ->)
 
 ---
 
@@ -166,6 +168,13 @@ space for update
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script>
+console.log("========================")
+console.log("┏━╸┏━┓┏━┓┏┓╻╻ ╻╻ ╻┏━╸╻ ╻\n┣╸ ┗━┓┃ ┃┃┗┫┣━┫┃ ┃┃╺┓┣━┫\n┗━╸┗━┛┗━┛╹ ╹╹ ╹┗━┛┗━┛╹ ╹\n");
+console.log("========================")
+</script>
+
 
 <!--
 	comments

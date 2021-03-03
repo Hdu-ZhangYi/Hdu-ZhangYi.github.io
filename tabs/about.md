@@ -13,6 +13,9 @@ comments: true
 <script>
 console.log("alert:No for the social engineering use! i don't love being tracked.\n\n");
 console.log("------welcome_friend-------\n---hope to see you again---\n-hope exchange friend link-\n");
+console.log("========================");
+console.log("┏━╸┏━┓┏━┓┏┓╻╻ ╻╻ ╻┏━╸╻ ╻\n┣╸ ┗━┓┃ ┃┃┗┫┣━┫┃ ┃┃╺┓┣━┫\n┗━╸┗━┛┗━┛╹ ╹╹ ╹┗━┛┗━┛╹ ╹\n");
+console.log("========================");
 </script>
 
 
@@ -169,11 +172,6 @@ space for update
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<script>
-console.log("========================");
-console.log("┏━╸┏━┓┏━┓┏┓╻╻ ╻╻ ╻┏━╸╻ ╻\n┣╸ ┗━┓┃ ┃┃┗┫┣━┫┃ ┃┃╺┓┣━┫\n┗━╸┗━┛┗━┛╹ ╹╹ ╹┗━┛┗━┛╹ ╹\n");
-console.log("========================");
-</script>
 
 
 <!--

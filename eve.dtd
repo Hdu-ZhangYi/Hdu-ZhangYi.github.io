@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT check (sid,name,timestamp,root)>
+<!ELEMENT check (sid,name,timestamp)>
 <!ELEMENT sid (#PCDATA)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT timestamp (#PCDATA)>

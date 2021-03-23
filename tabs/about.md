@@ -124,7 +124,7 @@ Mail_address:<esonhughoutside@gmail.com>
 
 > 事一个有一点点小简单的友链板
 
-name|website|descriptions(assert)
+name|website|descriptions(summary/motto)
 ----|---|---
 weepingdogel|[https://weepingdogel.github.io/](https://weepingdogel.github.io/)|"Once lost thing will never be able to come back."
 ajin|[https://blog.ajin.cloud/](https://ajin.cloud/)|"是世界上最好的人啊"
@@ -134,7 +134,7 @@ atsud0(小雪雪)|[https://atsud0.me/](https://atsud0.me/)|"Procrastination is t
 LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|"LeiBlog"
 isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|"不定期跟新个人碎碎念&学习笔记,欢迎浏览!"
 MiaoTony|[https://miaotony.xyz/](https://miaotony.xyz/)|"MeoW"
-
+chuj|[https://www.cjovi.icu/](https://www.cjovi.icu/)|"不好好学习，生活中就会多出许多魔法和奇迹"
 
 <!-- 
 space for update

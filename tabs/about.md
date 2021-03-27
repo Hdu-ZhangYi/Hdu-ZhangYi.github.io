@@ -18,6 +18,7 @@ console.log("┏━╸┏━┓┏━┓┏┓╻╻ ╻╻ ╻┏━╸╻ ╻\
 console.log("========================");
 </script>
 
+[TOC]
 
 # SYSTEM_INFO(personal about)
 

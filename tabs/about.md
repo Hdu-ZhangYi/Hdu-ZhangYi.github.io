@@ -94,9 +94,10 @@ almost each kind of meat
 
 GITHUB:
 
-1)[Pwnserver](https://github.com/ixiniansec/pwnserver)
-
-2)...
+* [Pwnserver](https://github.com/ixiniansec/pwnserver/)
+* [SimplelogServer](https://github.com/Esonhugh/SimpleLogServer/)
+* [TelegramVersion Sunnysport](https://github.com/Esonhugh/Sunnysport_Action/)
+* ... to be continue
 
 
 ---
@@ -115,6 +116,18 @@ Telegram_channel:[@Esonhugh_LifeNagging](https://t.me/Esonhugh_LifeNagging)
 
 Mail_address:<esonhughoutside@gmail.com>
 
+
+---
+
+# DN42 NETWORK
+
+* ASN: 4242422239
+* IPv4(Public): kali.esonhugh.me
+* ServerLocation: LasVegas
+* IPv4: 172.20.42.193
+* (Wireguard) PublicKey: mhfs7l/jBO7jqxaPUhf9R1+3U7c683ptoxplGt1zQAM=
+* ( i have no IPv6 )
+* peering now
 
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: About
+title: SYSTEM_INFO(personal about)
+
 comments: true
 ---
 
@@ -17,11 +18,6 @@ console.log("========================");
 console.log("┏━╸┏━┓┏━┓┏┓╻╻ ╻╻ ╻┏━╸╻ ╻\n┣╸ ┗━┓┃ ┃┃┗┫┣━┫┃ ┃┃╺┓┣━┫\n┗━╸┗━┛┗━┛╹ ╹╹ ╹┗━┛┗━┛╹ ╹\n");
 console.log("========================");
 </script>
-
-
-# SYSTEM_INFO(personal about)
-
----
 
 ## OS_Name : Esonhugh_skyworship
 
@@ -97,6 +93,7 @@ GITHUB:
 * [Pwnserver](https://github.com/ixiniansec/pwnserver/)
 * [SimplelogServer](https://github.com/Esonhugh/SimpleLogServer/)
 * [TelegramVersion Sunnysport](https://github.com/Esonhugh/Sunnysport_Action/)
+* [EXP for JD-freefuck](https://github.com/Esonhugh/JD-Freefuckfucker/)
 * ... to be continue
 
 

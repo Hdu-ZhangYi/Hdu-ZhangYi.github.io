@@ -5,8 +5,6 @@ categories: [dn42]
 tags: [dn42,bgp]
 ---
 
-# 简单的 DN42 折腾笔记
-
 > from esonhugh
 >
 > 好久没有更新 blog 有划水之嫌

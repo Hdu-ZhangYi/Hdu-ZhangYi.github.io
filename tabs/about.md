@@ -145,6 +145,7 @@ LeiBlog|[https://leiblog.wang/](https://leiblog.wang/)|"LeiBlog"
 isabellainori|[https://isabellainori.github.io](https://isabellainori.github.io)|"不定期跟新个人碎碎念&学习笔记,欢迎浏览!"
 MiaoTony|[https://miaotony.xyz/](https://miaotony.xyz/)|"MeoW"
 chuj|[https://www.cjovi.icu/](https://www.cjovi.icu/)|"不好好学习，生活中就会多出许多魔法和奇迹"
+Atom|[https://homeboyc.cn/](https://homeboyc.cn/)|"生命不息 折腾不止"
 
 <!-- 
 space for update

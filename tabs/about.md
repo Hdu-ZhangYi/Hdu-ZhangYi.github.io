@@ -113,6 +113,9 @@ Telegram_channel:[@Esonhugh_LifeNagging](https://t.me/Esonhugh_LifeNagging)
 
 Mail_address:<eson@esonhugh.me>
 
+---
+
+# GPG fingerprint: 5682 D069 6302 19FC 7B80  89EE FA7C 1A72 9870 1832
 
 ---
 

@@ -36,7 +36,7 @@ back
 ├── rss.xml			//who's rss?
 ├── vimrc			//my vim profile(easy download as wget)
 ├── Win10activater.zip		//win10 digital activater
-├── zshrc			//my zsh profile
+└── zshrc			//my zsh profile
 
 ```
 

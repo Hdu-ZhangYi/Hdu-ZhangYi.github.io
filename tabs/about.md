@@ -111,7 +111,7 @@ Telegram:[@Esonhugh_Shit $Code Producer](https://t.me/EsonHugh_Skywalker)
 
 Telegram_channel:[@Esonhugh_LifeNagging](https://t.me/Esonhugh_LifeNagging)
 
-Mail_address:<eson@esonhugh.me>
+Mail_address:<esonhughoutside@gmail.com>,<esonhugh@pwnwiki.org>
 
 ---
 

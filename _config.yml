@@ -8,35 +8,35 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Esonhugh's Blog                         # the main title
+title: Zhangyi's Blog                         # the main title
 
-tagline: __清闲悠哉快活日，俯首不问世间事。  # it will display as the sub-title
+tagline: 🏀🏀🏀  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A Geeker,shitcode programmer,cyber_sec researcher,learner
+  A Geeker,shitcode programmer,learner
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://esonhugh.me/'
 
-author: Esonhugh_Skyworship                 # change to your full name
+author: Hdu-Zhangyi                 # change to your full name
 
 avatar: /assets/img/reol.png   # support internet resources
 
 telegram:
-  username: EsonHugh_Skywalker
+  username: Hdu-Zhangyi
 github:
-  username: Esonhugh             # change to your github username
+  username: Zhangyi            # change to your github username
 
 twitter:
   username: skyworship2            # change to your twitter username
 
 social:
-  name: Esonhugh_skyworship                  # it will shows as the copyright owner in Footer
-  email: esonhugh@esonhugh.me             # change to your email address
+  name: Hdu-Zhangyi                 # it will shows as the copyright owner in Footer
+  email: hdulegend@hdu.edu.cn             # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/skyworship2      # change to your twitter homepage
-    - https://github.com/esonhugh      # change to your github homepage
+    - https://github.com/Hdu-ZhangYi      # change to your github homepage
     - https://t.me/EsonHugh_Skywalker
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -66,7 +66,7 @@ google_analytics:
 
 disqus:
   comments: true  # boolean type, the global switch for posts comments.
-  shortname: 'esonhugh'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  shortname: 'Zhangyi'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
 # Prefer color scheme setting, available values:

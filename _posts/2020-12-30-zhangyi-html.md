@@ -1,3 +1,9 @@
+---
+title: Hgame Week1 Write up
+date: 2020-12-30 +0800
+categories: [review]
+tag: review
+---
 学习为主吧，大佬们太强了，个人也没有太多精力投入还要做开发。比赛要求要交题解顺便也发在知乎上。
 
 《关于做出的题太少题解只需要20分钟这件事》

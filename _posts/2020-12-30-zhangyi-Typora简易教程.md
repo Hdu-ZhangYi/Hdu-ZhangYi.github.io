@@ -1,6 +1,6 @@
 ---
 title: html笔记
-date: 2020-12-30 +0800
+date: 2020-12-28 +0800
 categories: [review]
 tag: review
 ---
@@ -831,8 +831,6 @@ p{
 **7.4 CSS注释代码**
 
 就像在Html的注释一样，在CSS中也有注释语句：用`/*注释语句*/`来标明（Html中使用`<!--注释语句-->`)。就像下面代码：
-
-
 
 ![img](https://pic1.zhimg.com/80/v2-270b04de58d30d9f22c2c3628b672a8c_1440w.jpg)
 
